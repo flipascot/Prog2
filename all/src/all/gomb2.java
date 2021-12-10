@@ -1,23 +1,19 @@
 package all;
 
 import java.awt.*;
-import com.mycompany.brick.MyApp;
 
 import java.awt.event.*;
 import javax.swing.*;
 
-public class gomb extends JFrame implements ActionListener{
+public class gomb2 extends JFrame implements ActionListener{
 
+	JButton button1;
+	JLabel label1;
 	JButton button;
 	JLabel label;
 	
-	JButton button1;
-	JLabel label1;
-	
-	JButton button2;
-	JLabel label2;
-	
-	gomb(){
+	gomb2(){
+		
 		
 		
 		button1 = new JButton();
@@ -39,9 +35,9 @@ public class gomb extends JFrame implements ActionListener{
 		this.setSize(500,500);
 		this.setVisible(true);
 		this.add(button1);
-		//////////////////////////////////////////////////////////
+		
 		button = new JButton();
-		button.setBounds(100, 125, 250, 50);
+		button.setBounds(100, 100, 250, 50);
 		button.addActionListener(this);
 		button.setText("Labdas");
 		
@@ -59,40 +55,19 @@ public class gomb extends JFrame implements ActionListener{
 		this.setSize(500,500);
 		this.setVisible(true);
 		this.add(button);
-			//////////////////////////////////////////////////////////
-			button2 = new JButton();
-			button2.setBounds(100, 200, 250, 50);
-			button2.addActionListener(this);
-			button2.setText("snake");
-			
-			button2.setFocusable(false);
-			button2.setHorizontalTextPosition(JButton.CENTER);
-			button2.setVerticalTextPosition(JButton.BOTTOM);
-			button2.setFont(new Font("Comic Sans",Font.BOLD,25));
-			button2.setIconTextGap(-15);
-			button2.setForeground(Color.black);
-			button2.setBackground(Color.green);
-			button2.setBorder(BorderFactory.createEtchedBorder());
-			
-			this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			this.setLayout(null);
-			this.setSize(500,500);
-			this.setVisible(true);
-			this.add(button2);
 	}
+	
+		
+
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource()==button) {
-			com.mycompany.brick.MyApp MyApp=new com.mycompany.brick.MyApp();
-			
-		}	
 		if(e.getSource()==button1) {
 			pong2.PongGame PongGame=new pong2.PongGame();
 			
 		}	
-		if(e.getSource()==button2) {
-			snake.SnakeGame SnakeGame = new snake.SnakeGame();
+		if(e.getSource()==button) {
+			com.mycompany.brick.MyApp MyApp=new com.mycompany.brick.MyApp();
 			
 		}	
 	}

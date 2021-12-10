@@ -37,7 +37,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
     }
     
      public void paint(Graphics g) {
-        g.setColor(Color.white);
+        g.setColor(Color.black);
         g.fillRect(1, 1, 692, 592);
 
         map.draw((Graphics2D) g);
